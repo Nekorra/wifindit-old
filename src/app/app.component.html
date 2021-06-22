@@ -1,0 +1,54 @@
+<ion-app>
+  <ion-menu side="start" menuId="main" type="overlay" content-id="main" [swipeGesture] = "false">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Wifindit</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class = "menu-header-bg"></div>
+      <div class="header-content">
+        <ion-label>
+          <h2>{{getName()}}</h2>
+        </ion-label>
+      </div>
+      <div class="action-button">
+        <ion-button color = "success"><ion-icon name="ios-cash"></ion-icon> {{ totalcoin }}</ion-button>
+      </div>
+
+      <ion-list class = "menu-items" lines = "none">  
+
+          <ion-menu-toggle>
+            <ion-item [routerLink] = "['/dashboard']">
+              <ion-icon name = "home"></ion-icon>Dashboard
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item [routerLink] = "['/store']">
+              <ion-icon name = "ios-cash"></ion-icon>Store  
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item [routerLink] = "['/chats']">
+              <ion-icon name = "chatbubbles"></ion-icon>Chat  
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item [routerLink] = "['/profile']">
+              <ion-icon name = "settings"></ion-icon>Settings  
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item (click)="logout()">
+            <ion-menu-toggle>
+              <ion-icon name="exit"></ion-icon>Log Out
+            </ion-menu-toggle>
+          </ion-item>          
+          
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id = "main" [swipeGesture]="false"></ion-router-outlet>
+</ion-app>
+

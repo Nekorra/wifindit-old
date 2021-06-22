@@ -1,0 +1,58 @@
+#map {
+    height: 100%;
+    width: 100%
+}
+#dircard {
+    
+    max-height: 200px;
+    overflow: scroll;
+    position: absolute;
+    z-index: 1;
+    background-color:rgb(0, 167, 218, 0.3);
+    
+}
+
+ion-content {
+    --overflow: hidden;
+}
+
+
+.ion-padding {
+    padding: 16px;
+    font-size: 25px;
+}
+
+.sharebutton {
+    font-size: 14px;
+}
+
+.deletebutton {
+    font-size: 14px;
+}
+
+
+#firstcard {
+    margin-top: -310px;
+    background-color: rgb(0, 167, 218, 0.3);
+}
+
+.bg-transparent {
+    background: transparent;
+  }
+
+.listdiv[scrollx=true],.listdiv[scrolly=true] {
+    position: relative;
+    overflow: hidden;
+}
+
+.listdiv[scrollx=true] {
+   overflow-x: auto;
+}
+
+.listdiv[scrolly=true] {
+   overflow-y: auto;
+}
+
+ion-item{
+    --ion-background-color: #fff;
+ }

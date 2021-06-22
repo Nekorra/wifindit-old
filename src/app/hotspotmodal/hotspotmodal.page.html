@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hotspot</ion-title>
+    <ion-fab-button size = "small" color = "danger" (click)="CloseModal()"><ion-icon name="close"></ion-icon></ion-fab-button>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-card class="card-color">
+    <ion-text color="dark">
+      <h6 class="text">
+        To find hotspot name go to: 
+      </h6>
+      <h6 class="text">
+        Settings-> General-> About-> Name
+      </h6>
+      <h6 class="text">
+        Then turn on hotspot in:
+      </h6>
+      <h6 class="text">
+        Settings-> Personal Hotspot
+      </h6>
+      <h6 class="text">
+        Password is the password created in the Personal Hotspot Setting of phone
+      </h6>
+    </ion-text>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Hotspot info: </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Hotspot Name: </ion-label>
+        <ion-input [(ngModel)] = "hotspotName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hotspot Password: </ion-label>
+        <ion-input [(ngModel)] = "hotspotPass"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" fill="solid" (click)="ReturnInfo()">Update</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

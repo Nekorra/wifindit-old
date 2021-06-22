@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="settings-card">
+      <ion-list>
+        <div class="label">
+          <h3>Profile</h3>
+        </div>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="userInfo.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Nickname</ion-label>
+          <ion-input [(ngModel)]="userInfo.nickname"></ion-input>
+        </ion-item>
+    </ion-list>
+  </ion-card> 
+
+  <ion-card class="settings-card">
+    <ion-list>
+      <div class="label">
+        <h4>User Info</h4>
+      </div>
+      <!--
+      <ion-item>
+        <ion-text>Hotspots created: </ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-text>Hotspots joined: </ion-text>
+      </ion-item>
+      --> 
+      <ion-grid> 
+        <ion-row>
+            <ion-col>
+                <ion-text>Hotspots created: </ion-text>
+            </ion-col>
+            <ion-col>
+              <ion-text>Hotspots joined: {{numHotspotsConnect}}</ion-text>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+    <ion-row style="height: 20px"></ion-row>
+    </ion-list>
+  </ion-card> 
+
+  <ion-card class="settings-card">
+      <ion-list>
+        <div class="label">
+          <h3>Settings</h3>
+        </div>
+        <ion-item>
+          <ion-label>
+            Dark Mode
+          </ion-label>
+          <ion-toggle (click)="switch()" [(ngModel)]="toggleValue"></ion-toggle>
+ 
+        </ion-item>
+      </ion-list>
+  </ion-card>
+</ion-content>

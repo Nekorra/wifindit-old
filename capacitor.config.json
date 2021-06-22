@@ -1,0 +1,25 @@
+{
+  "appId": "com.wifindit.wifindit",
+  "appName": "WiFindit",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "android-minSdkVersion": "19",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "300",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "0",
+      "ShowSplashScreen": "false",
+      "WKWebViewOnly": "true",
+      "UseSwiftLanguageVersion": "5"
+    }
+  },
+  "ios": {
+    "cordovaLinkerFlags": ["-ObjC"]
+  }
+}

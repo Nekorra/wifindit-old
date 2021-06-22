@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-button fill="outline" color="success "slot="end"  (click)="showStore()"><ion-icon name="ios-cash"></ion-icon></ion-button>
+
+    <ion-title>Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf= "cartActive">
+    <ion-list>
+      <ion-card button (click)="checkout800()" color="primary" >
+        <ion-card-header>
+          <ion-card-title>900 Wifindit Credits </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <h1>Get 900 Credits to use</h1>
+            <p>$2.99 USD</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  
+      <ion-card button (click)="checkout1800()" color="primary" >
+        <ion-card-header>
+          <ion-card-title>1800 Wifindit Credits </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <h1>Get 1800 Credits to use</h1>
+            <p>$4.99 USD</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+  
+      <ion-card button (click)="checkout3600()" color="primary" >
+        <ion-card-header>
+          <ion-card-title>3600 Wifindit Credits </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <h1>Get 3600 Credits to use</h1>
+            <p>$7.99 USD</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+  
+  <div #dropinContainer></div>
+
+
+</ion-content>

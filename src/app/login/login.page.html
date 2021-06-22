@@ -1,0 +1,101 @@
+<img src="assets/blue_logo.png" class = "logo">
+<ion-content class = "background">
+  
+  <div class="flip-container" #flipcontainer>
+    <div class="flipper">
+      <div class="front">
+          <ion-card>
+              <ion-card-header>
+                <ion-card-title>Login</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+          
+                  <ion-item lines="none">
+                    <ion-label position="stacked">Email</ion-label>
+                    <ion-input type="email" placeholder="email" formControlName="email"></ion-input>
+                  </ion-item>
+          
+                  <ion-item lines="none">
+                    <ion-label position="stacked">Password</ion-label>
+                    <ion-input type="password" formControlName="password"></ion-input>
+                  </ion-item>
+
+                  <ion-button expand="block" type="submit" color="primary" [disabled]="!loginForm.valid"
+                  class="ion-padding-horizontal ion-margin-vertical">
+                Sign in
+                </ion-button>
+     
+                  <ion-button expand="block" type="button" color="secondary" fill="outline"
+                  class="ion-padding-horizontal ion-margin-vertical" (click)="toggleRegister()">
+                Create Account
+                </ion-button>
+                </form>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size = "6">
+                      <ion-checkbox checked style = "margin-bottom: 7px; margin-left: 8px;">
+                      </ion-checkbox>
+                      <ion-label style = "display: inline-block; vertical-align: top; padding-left: 5px; font-family: 'Nunito', san-serif;"><p style = "font-size:small; margin-bottom:3px; color: black; font-weight: bold;">Remember Me</p></ion-label>
+                    </ion-col>
+                    <ion-col size = "6">
+                      <ion-button fill = "clear" style = "font-size: small; color: #a8a8a8; margin-right: 10px; text-transform: none; font-family: 'Nunito, san-serif;'" (click) = "recover()"><p style = "font-size: small; margin-bottom: 27px; color: black; font-weight: bold;">Forgot Password</p></ion-button>
+                    </ion-col>
+                  </ion-row>
+              
+                </ion-grid>
+
+              </ion-card-content>
+              
+            </ion-card>
+      </div>
+
+      <div class="back">
+          <ion-card>
+              <ion-card-header>
+                <ion-card-title>New Account</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+          
+                  <ion-item lines="none">
+                    <ion-label position="stacked">Email</ion-label>
+                    <ion-input type="email" placeholder="joerogan@gmail.com" [(ngModel)] = "emal" formControlName="email"></ion-input>
+                  </ion-item>
+          
+                  <ion-item lines="none">
+                    <ion-label position="stacked">Name</ion-label>
+                    <ion-input placeholder="Joe" formControlName="nickname"></ion-input>
+                  </ion-item>
+          
+                  <ion-item lines="none">
+                    <ion-label position="stacked">Password</ion-label>
+                    <ion-input type="password" formControlName="password" [(ngModel)]="password1" ></ion-input>
+                  </ion-item>
+          
+                  <ion-button expand="block" type="submit" class="ion-padding-horizontal ion-margin-vertical"
+                  [disabled]="!registerForm.valid">
+                    Register
+                  </ion-button>
+
+                </form>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col size = "6">
+                      <ion-checkbox checked style = "margin-bottom: 7px; margin-left: 8px;">
+                      </ion-checkbox>
+                      <ion-label style = "display: inline-block; vertical-align: top; padding-left: 5px; font-family: 'Nunito', san-serif;"><p style = "font-size:small; margin-bottom:3px; color: black; font-weight: bold;">Remember Me</p></ion-label>
+                    </ion-col>
+                    <ion-col size = "6">
+                      <ion-button color="secondary" fill = "clear" style = "font-size: medium; color: #a8a8a8; margin-right: 10px; text-transform: none; font-family: 'Nunito, san-serif;'" (click) = "toggleRegister()"><p style = "font-size: small; margin-bottom: 28px; font-weight: bold;"> <ion-icon name="arrow-back" slot="start"></ion-icon>Back To Login</p></ion-button>
+                    </ion-col>
+                  </ion-row>
+              
+                </ion-grid>
+              </ion-card-content>
+            </ion-card>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

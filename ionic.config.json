@@ -1,0 +1,9 @@
+{
+  "name": "chemo",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "beda5f1a"
+}
